@@ -7,6 +7,15 @@ class Value(object):
     def __str__(self):
         return str(self.val)
 
+    def __hash__(self):
+        return hash(self.val)
+
+    def __eq__(self, other):
+        return isinstance(other, Value) and self.val == other.val
+
+    def __repr__(self):
+        return "<{} '{}'>".format(self.__class__.__name__, self.val)
+
     @abc.abstractproperty
     def val(self):
         pass

@@ -527,3 +527,9 @@ class TablesTest(unittest.TestCase):
         stmt = parse(query).pop()
         self.assertIsInstance(stmt, nodes.SelectStmt)
         self.assertEqual(stmt.tables(), {'my_table'})
+
+    def test_equality(self):
+        query = "select * from test"
+        stmt1 = parse(query).pop()
+        stmt2 = parse(query).pop()
+        assert stmt1 == stmt2
