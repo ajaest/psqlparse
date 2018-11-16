@@ -22,7 +22,7 @@ USE_CYTHON = bool(os.environ.get('USE_CYTHON'))
 
 ext = '.pyx' if USE_CYTHON else '.c'
 
-libpg_query = os.path.join('.', 'libpg_query-9.5-latest')
+libpg_query = os.path.join('.', 'libpg_query-10-1.0.2')
 
 libraries = ['pg_query']
 
