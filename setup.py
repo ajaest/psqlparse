@@ -8,13 +8,13 @@ import sys
 class PSqlParseBuildExt(build_ext):
 
     def run(self):
-        return_code = subprocess.call(['/bin/bash ./build_libpg_query.sh'])
-        if return_code:
-            sys.stderr.write('''
-An error occurred during extension building.
-Make sure you have bison and flex installed on your system.
-''')
-            sys.exit(return_code)
+#         return_code = subprocess.call(['./build_libpg_query.sh'])
+#         if return_code:
+#             sys.stderr.write('''
+# An error occurred during extension building.
+# Make sure you have bison and flex installed on your system.
+# ''')
+#             sys.exit(return_code)
         build_ext.run(self)
 
 

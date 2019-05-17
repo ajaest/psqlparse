@@ -1,9 +1,9 @@
 .cache
 .coveragerc
 libpg_query-10-latest.zip
-libpg_query-10-latest/
+#libpg_query-10-latest/
 *.so
-psqlparse/parser.c
+#psqlparse/parser.c
 build/
 dist/
 .idea/
