@@ -8,7 +8,7 @@ import sys
 class PSqlParseBuildExt(build_ext):
 
     def run(self):
-        return_code = subprocess.call(['bash ./build_libpg_query.sh'])
+        return_code = subprocess.call(['/bin/bash ./build_libpg_query.sh'])
         if return_code:
             sys.stderr.write('''
 An error occurred during extension building.
